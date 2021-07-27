@@ -1,0 +1,10 @@
+<div class="users">
+  <div class="left">
+    <app-user *ngFor="let item of users" [user]="item"></app-user>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

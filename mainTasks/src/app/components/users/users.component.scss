@@ -1,0 +1,10 @@
+.users{
+  display: flex;
+  flex-grow: 1;
+  > div{
+    padding: 20px;
+  }
+  .right{
+    border-left: 1px solid gray;
+  }
+}
