@@ -1,0 +1,10 @@
+.btn{
+  padding: 5px 10px;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  &:hover{
+    background-color: dodgerblue;
+  }
+}
