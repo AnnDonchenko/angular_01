@@ -1,0 +1,6 @@
+.posts{
+  display: flex;
+  & > div{
+    flex-basis: 600px;
+  }
+}
