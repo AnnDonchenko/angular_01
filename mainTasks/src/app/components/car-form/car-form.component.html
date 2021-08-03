@@ -1,0 +1,6 @@
+<p>Enter new car data:</p>
+<form [formGroup]="carForm" (submit)="setNewCar()">
+  <input type="number" [formControl]="carId">
+  <input type="text" [formControl]="carModel">
+  <button>Set new car</button>
+</form>
