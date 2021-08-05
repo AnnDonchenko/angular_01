@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
 import {BasicService} from "../../services/basic.service";
 import {IUser} from "../models/user.interface";
 
@@ -23,6 +22,5 @@ export class UsersComponent implements OnInit {
   findUser(selectEl: HTMLSelectElement) {
     this.selected =selectEl.selectedIndex+1;
     this.selectedUser = this.users[this.selected-1];
-    console.log(this.selectedUser);
   }
 }

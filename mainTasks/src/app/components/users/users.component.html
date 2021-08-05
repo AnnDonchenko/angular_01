@@ -1,7 +1,7 @@
-<form #form (submit)="findUser(selectEl)">
+<form (submit)="findUser(selectEl)">
   <select #selectEl name="selectUser" [(ngModel)]="selected">
     <option *ngFor="let user of users" [value]="user.id">{{user.id}} - {{user.name}}</option>
   </select>
   <button>find</button>
 </form>
-<app-user-details></app-user-details>
+<app-user-details *ngIf="selectedUser" [userDetails]="selectedUser"></app-user-details>
