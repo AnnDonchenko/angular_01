@@ -9,8 +9,7 @@ import {IUser} from "../models/user.interface";
 })
 export class UsersComponent implements OnInit {
   users: IUser[];
-  selected: number = 1;
-  selectedUser: IUser;
+  selectedUser: IUser | undefined;
 
   constructor(private basicService: BasicService) {
     this.basicService.getAllUsers().subscribe(value => this.users = value)
@@ -20,7 +19,6 @@ export class UsersComponent implements OnInit {
   }
 
   findUser(selectEl: HTMLSelectElement) {
-    this.selected =selectEl.selectedIndex+1;
-    this.selectedUser = this.users[this.selected-1];
+    this.selectedUser = this.users.find((value)=> value.id == +selectEl.value);
   }
 }

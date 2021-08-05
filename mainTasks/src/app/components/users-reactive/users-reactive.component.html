@@ -1,5 +1,5 @@
-<form (submit)="findUser(selectEl)">
-  <select #selectEl name="selectUser">
+<form [formGroup]="form" (ngSubmit)="findUserDetails()">
+  <select formControlName="nameSelect">
     <option *ngFor="let user of users" value="{{user.id}}">{{user.id}} - {{user.name}}</option>
   </select>
   <button>find</button>
